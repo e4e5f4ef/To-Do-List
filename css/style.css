@@ -18,6 +18,10 @@ ul {
   list-style: none;
 }
 
+input {
+  border-radius: 0;
+}
+
 .header {
   background-color: #ff3333;
   padding: 50px 0;
