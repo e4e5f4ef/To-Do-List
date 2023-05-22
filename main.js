@@ -1,4 +1,6 @@
 $(document).ready(function () {
+  $(".list-item-text").attr("contenteditable", "true");
+
   $(".header-button").click(function () {
     if ($(".header-input").val() != "") {
       $(".to-do-list").append(
@@ -15,8 +17,10 @@ $(document).ready(function () {
   });
 
   $(document).on("click", ".to-do-list-item", function () {
-    if ($(this).hasClass("checked")) {
-      $(this).removeClass("checked");
-    } else $(this).addClass("checked");
+    if (event.target.className != "list-item-text") {
+      if ($(this).hasClass("checked")) {
+        $(this).removeClass("checked");
+      } else $(this).addClass("checked");
+    }
   });
 });
